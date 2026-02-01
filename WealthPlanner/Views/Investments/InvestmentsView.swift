@@ -5,8 +5,12 @@ import Charts
 struct InvestmentsView: View {
     @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel = InvestmentsViewModel()
+    @StateObject private var exportService = ExportService.shared
     @State private var showAddHolding = false
     @State private var selectedAccount: Account?
+    @State private var showExportSheet = false
+    @State private var exportData: Data?
+    @State private var exportFilename: String?
 
     @Query(sort: [SortDescriptor(\Account.name)]) private var allAccounts: [Account]
 
@@ -84,6 +88,35 @@ struct InvestmentsView: View {
                             Label("Refresh Prices", systemImage: "arrow.clockwise")
                         }
                         .disabled(viewModel.holdings.isEmpty || viewModel.isRefreshingPrices)
+
+                        Divider()
+
+                        Button {
+                            Task {
+                                await exportHoldings(format: .csv)
+                            }
+                        } label: {
+                            Label("Export CSV", systemImage: "square.and.arrow.up")
+                        }
+                        .disabled(viewModel.holdings.isEmpty)
+
+                        Button {
+                            Task {
+                                await exportHoldings(format: .json)
+                            }
+                        } label: {
+                            Label("Export JSON", systemImage: "square.and.arrow.up")
+                        }
+                        .disabled(viewModel.holdings.isEmpty)
+
+                        Button {
+                            Task {
+                                await exportHoldings(format: .pdf)
+                            }
+                        } label: {
+                            Label("Export PDF", systemImage: "doc.richtext")
+                        }
+                        .disabled(viewModel.holdings.isEmpty)
                     } label: {
                         if viewModel.isRefreshingPrices {
                             ProgressView()
@@ -91,6 +124,11 @@ struct InvestmentsView: View {
                             Image(systemName: "plus")
                         }
                     }
+                }
+            }
+            .sheet(isPresented: $showExportSheet) {
+                if let data = exportData, let filename = exportFilename {
+                    ExportShareSheet(data: data, filename: filename)
                 }
             }
             .onAppear {
@@ -104,6 +142,24 @@ struct InvestmentsView: View {
                     AddHoldingView(account: account)
                 }
             }
+        }
+    }
+
+    private func exportHoldings(format: ExportFormat) async {
+        var options = ExportOptions()
+        options.format = format
+        options.dataType = .holdings
+
+        do {
+            let result = try await exportService.export(
+                modelContext: modelContext,
+                options: options
+            )
+            exportData = result.data
+            exportFilename = result.filename
+            showExportSheet = true
+        } catch {
+            print("Export error: \(error)")
         }
     }
 }
@@ -286,6 +342,24 @@ struct HoldingCard: View {
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 2)
     }
+}
+
+struct ExportShareSheet: UIViewControllerRepresentable {
+    let data: Data
+    let filename: String
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
+        try? data.write(to: tempURL)
+
+        let activityVC = UIActivityViewController(
+            activityItems: [tempURL],
+            applicationActivities: nil
+        )
+        return activityVC
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
 #Preview {

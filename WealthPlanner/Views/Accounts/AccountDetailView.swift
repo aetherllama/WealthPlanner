@@ -216,8 +216,13 @@ struct HoldingRow: View {
 }
 
 struct TransactionListView: View {
+    @Environment(\.modelContext) private var modelContext
     let account: Account
     @State private var searchText = ""
+    @State private var showExportSheet = false
+    @State private var exportData: Data?
+    @State private var exportFilename: String?
+    @StateObject private var exportService = ExportService.shared
 
     var filteredTransactions: [Transaction] {
         if searchText.isEmpty {
@@ -234,7 +239,81 @@ struct TransactionListView: View {
         }
         .navigationTitle("Transactions")
         .searchable(text: $searchText, prompt: "Search transactions")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Menu {
+                    Button {
+                        Task {
+                            await exportTransactions(format: .csv)
+                        }
+                    } label: {
+                        Label("Export CSV", systemImage: "square.and.arrow.up")
+                    }
+
+                    Button {
+                        Task {
+                            await exportTransactions(format: .json)
+                        }
+                    } label: {
+                        Label("Export JSON", systemImage: "square.and.arrow.up")
+                    }
+
+                    Button {
+                        Task {
+                            await exportTransactions(format: .pdf)
+                        }
+                    } label: {
+                        Label("Export PDF", systemImage: "doc.richtext")
+                    }
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                }
+                .disabled(account.transactions.isEmpty)
+            }
+        }
+        .sheet(isPresented: $showExportSheet) {
+            if let data = exportData, let filename = exportFilename {
+                TransactionExportSheet(data: data, filename: filename)
+            }
+        }
     }
+
+    private func exportTransactions(format: ExportFormat) async {
+        var options = ExportOptions()
+        options.format = format
+        options.dataType = .transactions
+        options.selectedAccounts = [account]
+
+        do {
+            let result = try await exportService.export(
+                modelContext: modelContext,
+                options: options
+            )
+            exportData = result.data
+            exportFilename = result.filename
+            showExportSheet = true
+        } catch {
+            print("Export error: \(error)")
+        }
+    }
+}
+
+struct TransactionExportSheet: UIViewControllerRepresentable {
+    let data: Data
+    let filename: String
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
+        try? data.write(to: tempURL)
+
+        let activityVC = UIActivityViewController(
+            activityItems: [tempURL],
+            applicationActivities: nil
+        )
+        return activityVC
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
 struct EditAccountView: View {
