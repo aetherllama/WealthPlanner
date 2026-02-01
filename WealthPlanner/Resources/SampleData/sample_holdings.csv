@@ -1,0 +1,11 @@
+Symbol,Name,Quantity,Cost Basis,Current Price,Asset Type
+NVDA,NVIDIA Corporation,25,450.00,875.50,Stock
+AMZN,Amazon.com Inc.,15,128.50,178.25,Stock
+TSLA,Tesla Inc.,10,185.00,248.75,Stock
+META,Meta Platforms Inc.,20,295.00,485.30,Stock
+SPY,SPDR S&P 500 ETF Trust,30,420.00,478.50,ETF
+QQQ,Invesco QQQ Trust,25,350.00,425.80,ETF
+BND,Vanguard Total Bond Market ETF,50,72.50,70.25,Bond
+VNQ,Vanguard Real Estate ETF,15,82.00,85.50,ETF
+GLD,SPDR Gold Shares,10,175.00,195.25,ETF
+ARKK,ARK Innovation ETF,20,45.00,48.75,ETF

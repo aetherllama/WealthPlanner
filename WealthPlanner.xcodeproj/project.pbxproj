@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAA00001001 /* WealthPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00001000; };
+		AAA00002001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00002000; };
+		AAA00003001 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00003000; };
+		AAA00004001 /* Holding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00004000; };
+		AAA00005001 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00005000; };
+		AAA00006001 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00006000; };
+		AAA00007001 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00007000; };
+		AAA00008001 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00008000; };
+		AAA00009001 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00009000; };
+		AAA0000A001 /* OFXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0000A000; };
+		AAA0000B001 /* PlaidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0000B000; };
+		AAA0000C001 /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0000C000; };
+		AAA0000D001 /* ImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0000D000; };
+		AAA0000E001 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0000E000; };
+		AAA0002F001 /* SampleDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0002F000; };
+		AAA00032001 /* PlaidSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00032000; };
+		AAA00030001 /* sample_holdings.csv in Resources */ = {isa = PBXBuildFile; fileRef = AAA00030000; };
+		AAA00031001 /* sample_transactions.csv in Resources */ = {isa = PBXBuildFile; fileRef = AAA00031000; };
+		AAA0000F001 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0000F000; };
+		AAA00010001 /* HoldingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00010000; };
+		AAA00011001 /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00011000; };
+		AAA00012001 /* GoalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00012000; };
+		AAA00013001 /* BudgetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00013000; };
+		AAA00014001 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00014000; };
+		AAA00015001 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00015000; };
+		AAA00016001 /* InvestmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00016000; };
+		AAA00017001 /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00017000; };
+		AAA00018001 /* GoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00018000; };
+		AAA00019001 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00019000; };
+		AAA0001A001 /* NetWorthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0001A000; };
+		AAA0001B001 /* AllocationChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0001B000; };
+		AAA0001C001 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0001C000; };
+		AAA0001D001 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0001D000; };
+		AAA0001E001 /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0001E000; };
+		AAA0001F001 /* InvestmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0001F000; };
+		AAA00020001 /* HoldingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00020000; };
+		AAA00021001 /* AddHoldingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00021000; };
+		AAA00022001 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00022000; };
+		AAA00023001 /* AddBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00023000; };
+		AAA00024001 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00024000; };
+		AAA00025001 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00025000; };
+		AAA00026001 /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00026000; };
+		AAA00027001 /* RetirementCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00027000; };
+		AAA00028001 /* FileImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00028000; };
+		AAA00029001 /* PlaidLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA00029000; };
+		AAA0002B001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0002B000; };
+		AAA0002C001 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA0002C000; };
+		AAA0002D001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA0002D000; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAA00000000 /* WealthPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WealthPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAA00001000 /* WealthPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthPlannerApp.swift; sourceTree = "<group>"; };
+		AAA00002000 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAA00003000 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		AAA00004000 /* Holding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holding.swift; sourceTree = "<group>"; };
+		AAA00005000 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		AAA00006000 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		AAA00007000 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		AAA00008000 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		AAA00009000 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		AAA0000A000 /* OFXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFXParser.swift; sourceTree = "<group>"; };
+		AAA0000B000 /* PlaidService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidService.swift; sourceTree = "<group>"; };
+		AAA0000C000 /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
+		AAA0000D000 /* ImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportService.swift; sourceTree = "<group>"; };
+		AAA0000E000 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		AAA0000F000 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
+		AAA00010000 /* HoldingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingRepository.swift; sourceTree = "<group>"; };
+		AAA00011000 /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
+		AAA00012000 /* GoalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRepository.swift; sourceTree = "<group>"; };
+		AAA00013000 /* BudgetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRepository.swift; sourceTree = "<group>"; };
+		AAA00014000 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		AAA00015000 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		AAA00016000 /* InvestmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsViewModel.swift; sourceTree = "<group>"; };
+		AAA00017000 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
+		AAA00018000 /* GoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewModel.swift; sourceTree = "<group>"; };
+		AAA00019000 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		AAA0001A000 /* NetWorthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCard.swift; sourceTree = "<group>"; };
+		AAA0001B000 /* AllocationChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocationChart.swift; sourceTree = "<group>"; };
+		AAA0001C000 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		AAA0001D000 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
+		AAA0001E000 /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
+		AAA0001F000 /* InvestmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsView.swift; sourceTree = "<group>"; };
+		AAA00020000 /* HoldingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingDetailView.swift; sourceTree = "<group>"; };
+		AAA00021000 /* AddHoldingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHoldingView.swift; sourceTree = "<group>"; };
+		AAA00022000 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		AAA00023000 /* AddBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetView.swift; sourceTree = "<group>"; };
+		AAA00024000 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		AAA00025000 /* GoalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailView.swift; sourceTree = "<group>"; };
+		AAA00026000 /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
+		AAA00027000 /* RetirementCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetirementCalculatorView.swift; sourceTree = "<group>"; };
+		AAA00028000 /* FileImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileImportView.swift; sourceTree = "<group>"; };
+		AAA00029000 /* PlaidLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidLinkView.swift; sourceTree = "<group>"; };
+		AAA0002B000 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AAA0002C000 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		AAA0002D000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAA0002E000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA0002F000 /* SampleDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataService.swift; sourceTree = "<group>"; };
+		AAA00030000 /* sample_holdings.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = sample_holdings.csv; sourceTree = "<group>"; };
+		AAA00031000 /* sample_transactions.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = sample_transactions.csv; sourceTree = "<group>"; };
+		AAA00032000 /* PlaidSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidSyncService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAAFRAME0001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAAGRP00000 = {
+			isa = PBXGroup;
+			children = (
+				AAAGRP00001 /* WealthPlanner */,
+				AAAGRP00002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAAGRP00001 /* WealthPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				AAAGRP00003 /* App */,
+				AAAGRP00004 /* Models */,
+				AAAGRP00005 /* Views */,
+				AAAGRP00006 /* ViewModels */,
+				AAAGRP00007 /* Repositories */,
+				AAAGRP00008 /* Services */,
+				AAAGRP00009 /* Utilities */,
+				AAAGRP0000A /* Resources */,
+			);
+			path = WealthPlanner;
+			sourceTree = "<group>";
+		};
+		AAAGRP00002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00000000 /* WealthPlanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAAGRP00003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00001000 /* WealthPlannerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AAAGRP00004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00003000 /* Account.swift */,
+				AAA00004000 /* Holding.swift */,
+				AAA00005000 /* Transaction.swift */,
+				AAA00006000 /* Goal.swift */,
+				AAA00007000 /* Budget.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AAAGRP00005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00002000 /* ContentView.swift */,
+				AAAGRP0000B /* Dashboard */,
+				AAAGRP0000C /* Accounts */,
+				AAAGRP0000D /* Investments */,
+				AAAGRP0000E /* Budget */,
+				AAAGRP0000F /* Goals */,
+				AAAGRP00010 /* Import */,
+				AAAGRP00011 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AAAGRP00006 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00014000 /* DashboardViewModel.swift */,
+				AAA00015000 /* AccountsViewModel.swift */,
+				AAA00016000 /* InvestmentsViewModel.swift */,
+				AAA00017000 /* BudgetViewModel.swift */,
+				AAA00018000 /* GoalsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AAAGRP00007 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AAA0000F000 /* AccountRepository.swift */,
+				AAA00010000 /* HoldingRepository.swift */,
+				AAA00011000 /* TransactionRepository.swift */,
+				AAA00012000 /* GoalRepository.swift */,
+				AAA00013000 /* BudgetRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AAAGRP00008 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AAA0000B000 /* PlaidService.swift */,
+				AAA0000C000 /* PriceService.swift */,
+				AAA0000D000 /* ImportService.swift */,
+				AAA0000E000 /* ExportService.swift */,
+				AAA0002F000 /* SampleDataService.swift */,
+				AAA00032000 /* PlaidSyncService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AAAGRP00009 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00008000 /* Keychain.swift */,
+				AAA00009000 /* CSVParser.swift */,
+				AAA0000A000 /* OFXParser.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AAAGRP0000A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAA0002D000 /* Assets.xcassets */,
+				AAA0002E000 /* Info.plist */,
+				AAAGRP00012 /* SampleData */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AAAGRP00012 /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00030000 /* sample_holdings.csv */,
+				AAA00031000 /* sample_transactions.csv */,
+			);
+			path = SampleData;
+			sourceTree = "<group>";
+		};
+		AAAGRP0000B /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00019000 /* DashboardView.swift */,
+				AAA0001A000 /* NetWorthCard.swift */,
+				AAA0001B000 /* AllocationChart.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		AAAGRP0000C /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				AAA0001C000 /* AccountsView.swift */,
+				AAA0001D000 /* AccountDetailView.swift */,
+				AAA0001E000 /* AddAccountView.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		AAAGRP0000D /* Investments */ = {
+			isa = PBXGroup;
+			children = (
+				AAA0001F000 /* InvestmentsView.swift */,
+				AAA00020000 /* HoldingDetailView.swift */,
+				AAA00021000 /* AddHoldingView.swift */,
+			);
+			path = Investments;
+			sourceTree = "<group>";
+		};
+		AAAGRP0000E /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00022000 /* BudgetView.swift */,
+				AAA00023000 /* AddBudgetView.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		AAAGRP0000F /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00024000 /* GoalsView.swift */,
+				AAA00025000 /* GoalDetailView.swift */,
+				AAA00026000 /* AddGoalView.swift */,
+				AAA00027000 /* RetirementCalculatorView.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		AAAGRP00010 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				AAA00028000 /* FileImportView.swift */,
+				AAA00029000 /* PlaidLinkView.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		AAAGRP00011 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AAA0002B000 /* SettingsView.swift */,
+				AAA0002C000 /* ExportView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAATARGET001 /* WealthPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAACFGLIST01;
+			buildPhases = (
+				AAASOURCE0001 /* Sources */,
+				AAAFRAME0001 /* Frameworks */,
+				AAARSRC00001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WealthPlanner;
+			productName = WealthPlanner;
+			productReference = AAA00000000 /* WealthPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAAPROJECT01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AAATARGET001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AAACFGLIST00;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAAGRP00000;
+			productRefGroup = AAAGRP00002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAATARGET001 /* WealthPlanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAARSRC00001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA0002D001 /* Assets.xcassets in Resources */,
+				AAA00030001 /* sample_holdings.csv in Resources */,
+				AAA00031001 /* sample_transactions.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAASOURCE0001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA00001001 /* WealthPlannerApp.swift in Sources */,
+				AAA00002001 /* ContentView.swift in Sources */,
+				AAA00003001 /* Account.swift in Sources */,
+				AAA00004001 /* Holding.swift in Sources */,
+				AAA00005001 /* Transaction.swift in Sources */,
+				AAA00006001 /* Goal.swift in Sources */,
+				AAA00007001 /* Budget.swift in Sources */,
+				AAA00008001 /* Keychain.swift in Sources */,
+				AAA00009001 /* CSVParser.swift in Sources */,
+				AAA0000A001 /* OFXParser.swift in Sources */,
+				AAA0000B001 /* PlaidService.swift in Sources */,
+				AAA0000C001 /* PriceService.swift in Sources */,
+				AAA0000D001 /* ImportService.swift in Sources */,
+				AAA0000E001 /* ExportService.swift in Sources */,
+				AAA0000F001 /* AccountRepository.swift in Sources */,
+				AAA00010001 /* HoldingRepository.swift in Sources */,
+				AAA00011001 /* TransactionRepository.swift in Sources */,
+				AAA00012001 /* GoalRepository.swift in Sources */,
+				AAA00013001 /* BudgetRepository.swift in Sources */,
+				AAA00014001 /* DashboardViewModel.swift in Sources */,
+				AAA00015001 /* AccountsViewModel.swift in Sources */,
+				AAA00016001 /* InvestmentsViewModel.swift in Sources */,
+				AAA00017001 /* BudgetViewModel.swift in Sources */,
+				AAA00018001 /* GoalsViewModel.swift in Sources */,
+				AAA00019001 /* DashboardView.swift in Sources */,
+				AAA0001A001 /* NetWorthCard.swift in Sources */,
+				AAA0001B001 /* AllocationChart.swift in Sources */,
+				AAA0001C001 /* AccountsView.swift in Sources */,
+				AAA0001D001 /* AccountDetailView.swift in Sources */,
+				AAA0001E001 /* AddAccountView.swift in Sources */,
+				AAA0001F001 /* InvestmentsView.swift in Sources */,
+				AAA00020001 /* HoldingDetailView.swift in Sources */,
+				AAA00021001 /* AddHoldingView.swift in Sources */,
+				AAA00022001 /* BudgetView.swift in Sources */,
+				AAA00023001 /* AddBudgetView.swift in Sources */,
+				AAA00024001 /* GoalsView.swift in Sources */,
+				AAA00025001 /* GoalDetailView.swift in Sources */,
+				AAA00026001 /* AddGoalView.swift in Sources */,
+				AAA00027001 /* RetirementCalculatorView.swift in Sources */,
+				AAA00028001 /* FileImportView.swift in Sources */,
+				AAA00029001 /* PlaidLinkView.swift in Sources */,
+				AAA0002B001 /* SettingsView.swift in Sources */,
+				AAA0002C001 /* ExportView.swift in Sources */,
+				AAA0002F001 /* SampleDataService.swift in Sources */,
+				AAA00032001 /* PlaidSyncService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AAACFG00001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAACFG00002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAACFG00003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WealthPlanner/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WealthPlanner;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "WealthPlanner uses Face ID to secure your financial data.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wealthplanner.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAACFG00004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WealthPlanner/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WealthPlanner;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "WealthPlanner uses Face ID to secure your financial data.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wealthplanner.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAACFGLIST00 /* Build configuration list for PBXProject "WealthPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAACFG00001 /* Debug */,
+				AAACFG00002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAACFGLIST01 /* Build configuration list for PBXNativeTarget "WealthPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAACFG00003 /* Debug */,
+				AAACFG00004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAAPROJECT01 /* Project object */;
+}
